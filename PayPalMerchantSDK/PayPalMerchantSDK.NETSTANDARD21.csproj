@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>PayPalMerchantSDK</AssemblyName>
+    <Version>2.16.206</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Properties\**" />
+    <EmbeddedResource Remove="Properties\**" />
+    <None Remove="Properties\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="lib\Newtonsoft.Json.dll" />
+    <None Remove="lib\PayPalCoreSDK.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="PayPalCoreSDK">
+      <HintPath>lib\netstandard21\PayPalCoreSDK.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
